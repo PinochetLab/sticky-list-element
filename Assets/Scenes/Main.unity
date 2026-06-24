@@ -353,7 +353,19 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7221030181299283902, guid: 2d54f064295b45245aca41bf0b229365, type: 3}
+      propertyPath: m_Alpha
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221030181299283902, guid: 2d54f064295b45245aca41bf0b229365, type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221030181299283902, guid: 2d54f064295b45245aca41bf0b229365, type: 3}
+      propertyPath: m_Interactable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221030181299283902, guid: 2d54f064295b45245aca41bf0b229365, type: 3}
+      propertyPath: m_BlocksRaycasts
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -754,7 +766,19 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7221030181299283902, guid: 2d54f064295b45245aca41bf0b229365, type: 3}
+      propertyPath: m_Alpha
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221030181299283902, guid: 2d54f064295b45245aca41bf0b229365, type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221030181299283902, guid: 2d54f064295b45245aca41bf0b229365, type: 3}
+      propertyPath: m_Interactable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221030181299283902, guid: 2d54f064295b45245aca41bf0b229365, type: 3}
+      propertyPath: m_BlocksRaycasts
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1020,6 +1044,7 @@ MonoBehaviour:
   otherPlayerCardPrefab: {fileID: 3305953364344037693, guid: fdaf0a933a00bfb43aabc0a64b0eac46, type: 3}
   thisPlayerCardPrefab: {fileID: 6283256009348610009, guid: 2d54f064295b45245aca41bf0b229365, type: 3}
   root: {fileID: 595098538}
+  layoutGroup: {fileID: 595098540}
   thisPlayerCardTop: {fileID: 1634796068}
   thisPlayerCardBottom: {fileID: 551367775}
   contentRt: {fileID: 595098538}

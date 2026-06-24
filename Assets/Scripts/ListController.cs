@@ -1,10 +1,12 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ListController : MonoBehaviour
 {
     [SerializeField] private PlayerCard otherPlayerCardPrefab;
     [SerializeField] private PlayerCard thisPlayerCardPrefab;
     [SerializeField] private Transform root;
+    [SerializeField] private VerticalLayoutGroup layoutGroup;
     
     [SerializeField] private PlayerCard thisPlayerCardTop;
     [SerializeField] private PlayerCard thisPlayerCardBottom;
@@ -23,10 +25,7 @@ public class ListController : MonoBehaviour
 
     private void Awake()
     {
-        while (root.childCount > 0)
-        {
-            DestroyImmediate(root.GetChild(0).gameObject);
-        }
+        layoutGroup.enabled = false;
         
         _thisPlayerCardTopRt = thisPlayerCardTop.GetComponent<RectTransform>();
         _thisPlayerCardBottomRt = thisPlayerCardBottom.GetComponent<RectTransform>();
@@ -53,6 +52,11 @@ public class ListController : MonoBehaviour
                 _thisPlayerCardRt = playerCard.GetComponent<RectTransform>();
             }
         }
+        
+        layoutGroup.enabled = true;
+        
+        LayoutRebuilder.ForceRebuildLayoutImmediate(root as RectTransform);
+        Canvas.ForceUpdateCanvases();
     }
 
     private void Update()
@@ -72,6 +76,7 @@ public class ListController : MonoBehaviour
             _cardPlace = cardPlace;
             UpdatePlace(cardPlace);
         }
+        UpdatePlace(cardPlace);
     }
 
     private void UpdatePlace(CardPlace place)
